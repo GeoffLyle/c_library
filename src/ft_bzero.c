@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/12 12:15:46 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 12:22:44 by alyle            ###   ########.fr       */
+/*   Created: 2018/05/11 17:57:22 by alyle             #+#    #+#             */
+/*   Updated: 2018/05/12 12:24:22 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_bzero(void *s, size_t n)
 {
-	unsigned char *d;
+	unsigned char *str;
 
-	if (len)
+	if (n)
 	{
-		d = b;
-		while (len--)
-			*d++ = c;
+		str = s;
+		while (n--)
+			*str++ = 0;
 	}
-	return (b);
+	return (s);
 }
