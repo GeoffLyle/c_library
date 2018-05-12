@@ -1,15 +1,12 @@
 #include <string.h>
 
-void	*ft_memset(void *str, int c, size_t len)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	conv;
-
-	conv = c;
-	while(str && len)
+	while(len)
 	{
-		*str = conv;
-		str++;
+		*b = (unsigned char)c;
+		b++;
 		len--;
 	}
-	return (str);
+	return (b);
 }
