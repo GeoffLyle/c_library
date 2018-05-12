@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/12 15:00:28 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 15:29:05 by alyle            ###   ########.fr       */
+/*   Created: 2018/05/12 15:30:34 by alyle             #+#    #+#             */
+/*   Updated: 2018/05/12 16:08:44 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memchr(const void *s, int c, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	 const char	*src;
+	const char	*str1;
+	const char	*str2;
 
-	if (n)
+	str1 = s1;
+	str2 = s2;
+	while (n--)
 	{
-		src = s;
-		while (n--)
-		{
-			if (*src == (unsigned char)c)
-				return (void *) (s);
-			src++;
-		}
+		if (*str1 != *str2)
+			return (*str1 - *str2);
+		str1++;
+		str2++;
 	}
-	return (NULL);
+	return (0);
 }
