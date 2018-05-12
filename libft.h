@@ -6,12 +6,14 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 14:49:45 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 14:51:19 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/12 14:57:43 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include <string.h>
 
 typedef struct		s_list
 {
