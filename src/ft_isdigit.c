@@ -1,29 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/12 14:17:26 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 16:11:43 by alyle            ###   ########.fr       */
+/*   Created: 2018/05/12 16:25:34 by alyle             #+#    #+#             */
+/*   Updated: 2018/05/12 16:26:34 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
-		size_t n)
+int		ft_isdigit(int c)
 {
-	char		*d;
-	const char	*s;
-
-	if (n)
-	{
-		d = dst;
-		s = src;
-		while (n-- && *s != c)
-			*d++ = *s++;
-	}
-	return (dst);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }

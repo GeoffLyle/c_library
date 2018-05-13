@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/12 14:17:26 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 16:11:43 by alyle            ###   ########.fr       */
+/*   Created: 2018/03/21 11:58:46 by alyle             #+#    #+#             */
+/*   Updated: 2018/05/12 16:52:59 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include <stdlib.h>
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
-		size_t n)
+static char	*ft_strcpy(char *dst, const char *src)
 {
-	char		*d;
-	const char	*s;
+	int		i;
 
-	if (n)
+	i = 0;
+	while (src[i])
 	{
-		d = dst;
-		s = src;
-		while (n-- && *s != c)
-			*d++ = *s++;
+		dst[i] = src[i];
+		i++;
 	}
+	dst[i] = '\0';
 	return (dst);
+}
+
+char		*ft_strdup(const char *src)
+{
+	int		srclen;
+	char	*str;
+
+	srclen = 0;
+	while (src[srclen])
+		srclen++;
+	str = (char*)malloc(sizeof(*str) * (srclen + 1));
+	ft_strcpy(str, src);
+	return (str);
 }

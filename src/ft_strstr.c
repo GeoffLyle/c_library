@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/12 14:17:26 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 16:11:43 by alyle            ###   ########.fr       */
+/*   Created: 2018/03/19 12:31:20 by alyle             #+#    #+#             */
+/*   Updated: 2018/03/23 13:06:13 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
-		size_t n)
+char	*ft_strstr(char *str, char *to_find)
 {
-	char		*d;
-	const char	*s;
+	int		i;
+	int		j;
 
-	if (n)
+	i = 0;
+	j = 0;
+	while (str[i] != '\0')
 	{
-		d = dst;
-		s = src;
-		while (n-- && *s != c)
-			*d++ = *s++;
+		while (to_find[j] != '\0' && to_find[j] == str[i + j])
+			j++;
+		if (to_find[j] == '\0')
+			return (str + i + j);
+		i++;
+		j = 0;
 	}
-	return (dst);
+	return (0);
 }

@@ -1,29 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/12 14:17:26 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 16:11:43 by alyle            ###   ########.fr       */
+/*   Created: 2018/03/19 20:41:39 by alyle             #+#    #+#             */
+/*   Updated: 2018/05/12 17:09:42 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+size_t	ft_strlcat(char *restrict s1, const char *restrict s2,
 		size_t n)
 {
-	char		*d;
-	const char	*s;
+	size_t	i;
+	size_t	j;
+	size_t	destlen;
+	size_t	srclen;
 
-	if (n)
+	j = 0;
+	destlen = ft_strlen(s1);
+	srclen = ft_strlen(s2);
+	i = destlen;
+	if (destlen >= n)
+		return (srclen + n);
+	while (s2[j] && i + j < n - 1)
 	{
-		d = dst;
-		s = src;
-		while (n-- && *s != c)
-			*d++ = *s++;
+		s1[i + j] = s2[j];
+		j++;
 	}
-	return (dst);
+	s1[i + j] = '\0';
+	return (destlen + srclen);
 }

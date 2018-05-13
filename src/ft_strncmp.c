@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/12 14:17:26 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 16:11:43 by alyle            ###   ########.fr       */
+/*   Created: 2018/03/19 15:25:32 by alyle             #+#    #+#             */
+/*   Updated: 2018/05/12 16:31:14 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-void	*ft_memccpy(void *restrict dst, const void *restrict src, int c,
-		size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char		*d;
-	const char	*s;
-
-	if (n)
+	while (*s1 && *s2 && n--)
 	{
-		d = dst;
-		s = src;
-		while (n-- && *s != c)
-			*d++ = *s++;
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		s1++;
+		s2++;
 	}
-	return (dst);
+	return (*s1 - *s2);
 }
