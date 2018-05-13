@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/19 20:41:39 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 17:36:04 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/12 17:42:54 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-size_t	ft_strlcat(char *restrict s1, const char *restrict s2,
+size_t			ft_strlcat(char *restrict s1, const char *restrict s2,
 		size_t n)
 {
 	size_t	i;
