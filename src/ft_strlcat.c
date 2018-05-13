@@ -6,13 +6,13 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/19 20:41:39 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 17:09:42 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/12 17:36:04 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	ft_strlen(const char *s)
+static size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

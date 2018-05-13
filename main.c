@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/12 14:49:45 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 17:31:20 by alyle            ###   ########.fr       */
+/*   Created: 2018/05/12 14:48:29 by alyle             #+#    #+#             */
+/*   Updated: 2018/05/12 14:57:15 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <string.h>
-
-typedef struct		s_list
+int		main(void)
 {
-	void			*content;
-	size_t			content_size;
-	struct s_list	*next;
-}					t_list;
-
-#endif
+	return (0);
+}

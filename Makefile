@@ -6,7 +6,7 @@
 #    By: alyle <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/12 12:17:16 by alyle             #+#    #+#              #
-#    Updated: 2018/05/12 17:25:29 by alyle            ###   ########.fr        #
+#    Updated: 2018/05/12 17:11:35 by alyle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,13 @@ LIBNAME = libft.a
 
 GCCFLAGS = -Wall -Wextra -Werror
 
-SRCS = src/ft_memset.c src/ft_bzero.c src/ft_memcpy.c src/ft_memccpy.c \
+SRCS = main.c src/ft_memset.c src/ft_bzero.c src/ft_memcpy.c src/ft_memccpy.c \
 	   src/ft_memmove.c src/ft_memchr.c src/ft_memcmp.c src/ft_strlen.c \
 	   src/ft_strdup.c src/ft_strcpy.c src/ft_strncpy.c src/ft_strcat.c \
 	   src/ft_strlcat.c src/ft_strcmp.c src/ft_strncmp.c src/ft_atoi.c \
 	   src/ft_isalpha.c src/ft_isdigit.c
 
-OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
+OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o \
 	  ft_strcat.o ft_strlcat.o ft_strcmp.o ft_strncmp.o ft_atoi.o ft_isalpha.o \
 	  ft_isdigit.o
