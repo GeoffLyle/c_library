@@ -10,21 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strstr(char *str, char *to_find)
+#include <string.h>
+
+char	*ft_strstr(const char *haystack, const char *needle)
 {
 	int		i;
 	int		j;
 
 	i = 0;
 	j = 0;
-	while (str[i] != '\0')
+	while (haystack[i] != '\0')
 	{
-		while (to_find[j] != '\0' && to_find[j] == str[i + j])
+		while (needle[j] != '\0' && needle[j] == haystack[i + j])
 			j++;
-		if (to_find[j] == '\0')
-			return (str + i + j);
+		if (needle[j] == '\0')
+			return (haystack + i + j);
 		i++;
 		j = 0;
 	}
-	return (0);
+	return (NULL);
 }
