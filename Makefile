@@ -6,7 +6,7 @@
 #    By: alyle <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/12 12:17:16 by alyle             #+#    #+#              #
-#    Updated: 2018/05/19 15:36:55 by alyle            ###   ########.fr        #
+#    Updated: 2018/05/19 16:25:21 by alyle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRCS = main.c src/ft_memset.c src/ft_bzero.c src/ft_memcpy.c src/ft_memccpy.c \
 	   src/ft_strrchr.c src/ft_strnstr.c src/ft_isalnum.c src/ft_isascii.c \
 	   src/ft_isprint.c src/ft_toupper.c src/ft_tolower.c src/ft_memalloc.c \
 	   src/ft_memdel.c src/ft_strnew.c src/ft_strdel.c src/ft_strclr.c \
-	   src/ft_striter.c src/ft_striteri.c src/ft_strmap.c src/ft_strmapi.c
+	   src/ft_striter.c src/ft_striteri.c src/ft_strmap.c src/ft_strmapi.c \
+	   src/ft_strequ.c src/strnequ.c src/ft_strsub.c src/ft_strjoin.c \
 
 OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o \
@@ -32,7 +33,8 @@ OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_isdigit.o ft_strncat.o ft_strchr.o ft_strrchr.o ft_strnstr.o \
 	  ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o \
 	  ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o \
-	  ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o
+	  ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_strequ.o \
+	  ft_strnequ.o ft_strsub.o ft_strjoin.o
 
 
 all: $(LIBNAME) $(NAME)
