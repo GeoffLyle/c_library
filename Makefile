@@ -20,12 +20,12 @@ SRCS = main.c src/ft_memset.c src/ft_bzero.c src/ft_memcpy.c src/ft_memccpy.c \
 	   src/ft_memmove.c src/ft_memchr.c src/ft_memcmp.c src/ft_strlen.c \
 	   src/ft_strdup.c src/ft_strcpy.c src/ft_strncpy.c src/ft_strcat.c \
 	   src/ft_strlcat.c src/ft_strcmp.c src/ft_strncmp.c src/ft_atoi.c \
-	   src/ft_isalpha.c src/ft_isdigit.c
+	   src/ft_isalpha.c src/ft_isdigit.c src/ft_strncat.c
 
 OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o \
 	  ft_strcat.o ft_strlcat.o ft_strcmp.o ft_strncmp.o ft_atoi.o ft_isalpha.o \
-	  ft_isdigit.o
+	  ft_isdigit.o ft_strncat.o
 
 
 all: $(LIBNAME) $(NAME)
