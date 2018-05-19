@@ -6,13 +6,13 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 17:43:20 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 18:23:53 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/19 14:36:41 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char *ft_strncat(char s1, const char s2, size_t n)
+char	*ft_strncat(char s1, const char s2, size_t n)
 {
 	unsigned int	i;
 
@@ -24,5 +24,5 @@ char *ft_strncat(char s1, const char s2, size_t n)
 		i++;
 	}
 	s1[i] = '\0';
-	return (s1)
+	return (s1);
 }

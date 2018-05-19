@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/19 14:19:56 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/19 14:19:59 by alyle            ###   ########.fr       */
+/*   Created: 2018/05/19 14:14:20 by alyle             #+#    #+#             */
+/*   Updated: 2018/05/19 14:18:04 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdlib.h>
 #include <string.h>
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnew(size_t size)
 {
 	int		i;
-	int		j;
+	char	*fresh;
 
 	i = 0;
-	j = 0;
-	while (haystack[i] != '\0' && i < len)
+	fresh = (char)malloc(sizeof(char) * size);
+	if (fresh)
 	{
-		while (needle[j] != '\0' && needle[j] == haystack[i + j])
-			j++;
-		if (needle[j] == '\0')
-			return (haystack + i + j);
-		i++;
-		j = 0;
+		while (i < size)
+			fresh[i++] = '\0';
+		return (fresh);
 	}
 	return (NULL);
 }

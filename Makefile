@@ -6,7 +6,7 @@
 #    By: alyle <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/12 12:17:16 by alyle             #+#    #+#              #
-#    Updated: 2018/05/12 17:11:35 by alyle            ###   ########.fr        #
+#    Updated: 2018/05/19 14:51:51 by alyle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,13 +22,15 @@ SRCS = main.c src/ft_memset.c src/ft_bzero.c src/ft_memcpy.c src/ft_memccpy.c \
 	   src/ft_strlcat.c src/ft_strcmp.c src/ft_strncmp.c src/ft_atoi.c \
 	   src/ft_isalpha.c src/ft_isdigit.c src/ft_strncat.c src/ft_strchr.c \
 	   src/ft_strrchr.c src/ft_strnstr.c src/ft_isalnum.c src/ft_isascii.c \
-	   src/ft_isprint.c src/ft_toupper.c src/ft_tolower.c
+	   src/ft_isprint.c src/ft_toupper.c src/ft_tolower.c src/ft_memalloc.c \
+	   src/ft_memdel.c src/ft_strnew.c src/ft_strdel.c src/ft_strclr.c
 
 OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o \
 	  ft_strcat.o ft_strlcat.o ft_strcmp.o ft_strncmp.o ft_atoi.o ft_isalpha.o \
 	  ft_isdigit.o ft_strncat.o ft_strchr.o ft_strrchr.o ft_strnstr.o \
-	  ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o
+	  ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o \
+	  ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o
 
 
 all: $(LIBNAME) $(NAME)
