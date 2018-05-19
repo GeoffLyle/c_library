@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_striter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/19 14:08:38 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/19 15:34:09 by alyle            ###   ########.fr       */
+/*   Created: 2018/05/19 14:54:26 by alyle             #+#    #+#             */
+/*   Updated: 2018/05/19 14:55:40 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-
-void	*ft_memalloc(size_t size)
+void	ft_striter(char *s, void (*f)(char *))
 {
-	void	memory;
-
-	memory = malloc(size);
-	if (memory)
-		return (memory);
-	return (NULL);
+	while (*s)
+	{
+		*s = f(*s);
+		s++;
+	}
 }
