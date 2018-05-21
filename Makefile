@@ -26,7 +26,9 @@ SRCS = main.c src/ft_memset.c src/ft_bzero.c src/ft_memcpy.c src/ft_memccpy.c \
 	   src/ft_memdel.c src/ft_strnew.c src/ft_strdel.c src/ft_strclr.c \
 	   src/ft_striter.c src/ft_striteri.c src/ft_strmap.c src/ft_strmapi.c \
 	   src/ft_strequ.c src/strnequ.c src/ft_strsub.c src/ft_strjoin.c \
-	   src/ft_strtrim.c src/ft_strsplit.c
+	   src/ft_strtrim.c src/ft_strsplit.c src/ft_putchar.c src/ft_putstr.c \
+	   src/ft_putnbr.c src/ft_putchar_fd.c src/ft_putstr_fd.c  \
+	   src/ft_putnbr_fd.c
 
 OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o \
@@ -35,7 +37,9 @@ OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_isalnum.o ft_isascii.o ft_isprint.o ft_toupper.o ft_tolower.o \
 	  ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o \
 	  ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_strequ.o \
-	  ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o
+	  ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
+	  ft_putchar.o ft_putstr.o ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o \
+	  fd_putnbr_fd.o
 
 
 all: $(LIBNAME) $(NAME)
