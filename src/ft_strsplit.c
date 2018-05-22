@@ -12,7 +12,7 @@
 
 #include <stdlib.h>
 
-static int		ft_copy_word(char *dest, char *src, int j)
+static int		ft_copy_word(char *dest, char const *src, int j)
 {
 	int		i;
 
@@ -27,7 +27,7 @@ static int		ft_copy_word(char *dest, char *src, int j)
 	return (j);
 }
 
-static int		ft_count_words(char *str, char c)
+static int		ft_count_words(char const *str, char c)
 {
 	int		count;
 	int		on;
@@ -57,8 +57,12 @@ int				ft_wl(char const *s, char c, int start)
 {
 	int		wordlen;
 
-	while (*s && *s != c)
+	wordlen = 0;
+	while (s[start] && s[start] != c)
+	{
 		wordlen++;
+		start++;
+	}
 	return (wordlen);
 }
 
@@ -73,7 +77,7 @@ char			**ft_strsplit(char const *s, char c)
 	{
 		word = 0;
 		j = 0;
-		while (count)
+		while (s[j])
 		{
 			if (s[j] == c)
 				j++;
@@ -82,7 +86,7 @@ char			**ft_strsplit(char const *s, char c)
 				sa[word] = (char*)malloc(sizeof(char*) * (ft_wl(s, c, j) + 1));
 				if (!sa[word])
 					return (NULL);
-				j = ft_copy_word(sa[word++], str, j);
+				j = ft_copy_word(sa[word++], s, j);
 			}
 		}
 		sa[word] = 0;
