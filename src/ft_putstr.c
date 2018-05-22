@@ -12,8 +12,13 @@
 
 #include <unistd.h>
 
-void	ft_putstr(const char *s)
+static void    ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void			ft_putstr(const char *s)
 {
 	while (*s != '\0')
-		write(1, *s++, 1);
+		ft_putchar(*s++);
 }

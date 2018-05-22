@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcat(char *restrict s1, char *restrict s2)
+char	*ft_strcat(char *s1, char *s2)
 {
 	int		i;
 	int		j;
