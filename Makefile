@@ -28,7 +28,9 @@ SRCS = main.c src/ft_memset.c src/ft_bzero.c src/ft_memcpy.c src/ft_memccpy.c \
 	   src/ft_strequ.c src/ft_strnequ.c src/ft_strsub.c src/ft_strjoin.c \
 	   src/ft_strtrim.c src/ft_strsplit.c src/ft_putchar.c src/ft_putstr.c \
 	   src/ft_putnbr.c src/ft_putchar_fd.c src/ft_putstr_fd.c  \
-	   src/ft_putnbr_fd.c src/ft_putendl.c src/ft_putendl_fd.c src/ft_itoa.c 
+	   src/ft_putnbr_fd.c src/ft_putendl.c src/ft_putendl_fd.c src/ft_itoa.c \
+	   src/ft_lstnew.c src/ft_lstdelone.c src/ft_lstdel.c src/ft_lstadd.c \
+	   src/ft_lstiter.c src/ft_lstmap.c
 
 OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o \
@@ -39,7 +41,8 @@ OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o ft_strequ.o \
 	  ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
 	  ft_putchar.o ft_putstr.o ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o \
-	  ft_putnbr_fd.o ft_putendl.o ft_putendl_fd.o ft_itoa.o
+	  ft_putnbr_fd.o ft_putendl.o ft_putendl_fd.o ft_itoa.o ft_lstnew.o \
+	  ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
 
 
 all: $(LIBNAME) $(NAME)
