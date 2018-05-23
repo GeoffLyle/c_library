@@ -52,7 +52,7 @@ char		*ft_strtrim(char const *s)
 	while (s[start] == ' ' || s[start] == '\n' || s[start] == '\t')
 		start++;
 	count = get_count(s, count, start);
-	trimstr = (char)malloc(sizeof(char) * (count + 1));
+	trimstr = (char *)malloc(sizeof(char *) * (count + 1));
 	if (trimstr)
 	{
 		while (count--)

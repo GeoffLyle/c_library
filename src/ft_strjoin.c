@@ -31,7 +31,7 @@ char			*ft_strjoin(char const *s1, char const *s2)
 
 	s1len = ft_strlen(s1);
 	s2len = ft_strlen(s2);
-	joinedstr = (char)malloc(sizeof(char) * (s1len + s2len + 1));
+	joinedstr = (char *)malloc(sizeof(char *) * (s1len + s2len + 1));
 	while (*s1)
 		*joinedstr++ = *s1++;
 	while (*s2)

@@ -23,10 +23,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	while (s[strlen])
 		strlen++;
-	strmapi = (char)malloc(sizeof(char) * (strlen + 1));
+	strmapi = (char *)malloc(sizeof(char *) * (strlen + 1));
 	while (i < strlen)
 	{
-		strmap[i] = f(i, s[i]);
+		strmapi[i] = f(i, s[i]);
 		i++;
 	}
 	strmapi[i] = '\0';
