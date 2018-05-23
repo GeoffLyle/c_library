@@ -14,19 +14,26 @@
 
 char	*strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
-	j = 0;
+	if (!needle)
+		return ((char *)haystack);
 	while (haystack[i] != '\0' && i < len)
 	{
+		j = 0;
 		while (needle[j] != '\0' && needle[j] == haystack[i + j])
 			j++;
 		if (needle[j] == '\0')
-			return (haystack + i + j);
+		{
+			while (i--)
+				haystack++;
+			while (j--)
+				haystack++;
+			return ((char *) haystack);
+		}
 		i++;
-		j = 0;
 	}
 	return (NULL);
 }

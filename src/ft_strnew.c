@@ -15,11 +15,11 @@
 
 char	*ft_strnew(size_t size)
 {
-	int		i;
+	size_t	i;
 	char	*fresh;
 
 	i = 0;
-	fresh = (char)malloc(sizeof(char) * size);
+	fresh = (char *)malloc(sizeof(char *) * size);
 	if (fresh)
 	{
 		while (i < size)
