@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 14:20:14 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/19 14:36:00 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 16:15:24 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (*s == c)
 		{
-			return ((char *) s);
+			return ((char *)s);
 		}
 		s++;
 	}
 	if (c == '\0')
-		return ((char *) s);
+		return ((char *)s);
 	return (NULL);
 }

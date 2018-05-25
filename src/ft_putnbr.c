@@ -6,18 +6,18 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/15 11:28:20 by alyle             #+#    #+#             */
-/*   Updated: 2018/03/18 20:52:11 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 16:17:31 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-static void    ft_putchar(char c)
+static void		ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
 
-void	ft_putnbr(int n)
+void			ft_putnbr(int n)
 {
 	if (n < 0)
 	{

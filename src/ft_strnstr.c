@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 14:19:56 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/19 14:19:59 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 16:15:07 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*strnstr(const char *haystack, const char *needle, size_t len)
 				haystack++;
 			while (j--)
 				haystack++;
-			return ((char *) haystack);
+			return ((char *)haystack);
 		}
 		i++;
 	}

@@ -6,13 +6,13 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/16 15:31:52 by alyle             #+#    #+#             */
-/*   Updated: 2018/03/16 17:00:18 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 16:16:54 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-static void    ft_putchar(char c)
+static void		ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
