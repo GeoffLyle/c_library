@@ -6,13 +6,11 @@
 #    By: alyle <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/12 12:17:16 by alyle             #+#    #+#              #
-#    Updated: 2018/05/25 17:13:25 by alyle            ###   ########.fr        #
+#    Updated: 2018/05/25 17:33:28 by alyle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft
-
-LIBNAME = libft.a
+NAME = libft.a
 
 GCCFLAGS = -Wall -Wextra -Werror
 
@@ -44,24 +42,20 @@ OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_putnbr_fd.o ft_putendl.o ft_putendl_fd.o ft_itoa.o ft_lstnew.o \
 	  ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
 
-INCLUDES = ./includes
+INCLUDES = ./includes/
 
 
 all: $(LIBNAME) $(NAME)
 
 $(NAME):
-	@gcc $(GCCFLAGS) -o $(NAME) -L . $(LIBNAME)
-
-$(LIBNAME):
 	@gcc $(GCCFLAGS) -c $(SRCS) -I$(INCLUDES)
-	@ar rc $(LIBNAME) $(OBJ)
-	@ranlib $(LIBNAME)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 clean:
 	@/bin/rm -f $(OBJ)
 
 fclean: clean
 	@/bin/rm -f $(NAME)
-	@/bin/rm -f $(LIBNAME)
 
 re: fclean all

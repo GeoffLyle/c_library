@@ -6,11 +6,11 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/19 16:16:23 by alyle             #+#    #+#             */
-/*   Updated: 2018/03/19 16:55:19 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 17:25:18 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalphanum(char c)
+static int	ft_isalphanum(char c)
 {
 	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ||
 			(c >= '0' && c <= '9'))
@@ -18,7 +18,7 @@ int		ft_isalphanum(char c)
 	return (0);
 }
 
-char	*ft_strcapitalize(char *str)
+char		*ft_strcapitalize(char *str)
 {
 	int		i;
 	int		word;

@@ -6,13 +6,13 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 14:19:56 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/25 16:15:07 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 17:24:29 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;

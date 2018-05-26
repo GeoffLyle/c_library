@@ -6,13 +6,13 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 19:56:31 by alyle             #+#    #+#             */
-/*   Updated: 2018/03/21 21:35:26 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 17:26:53 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-unsigned int	ft_strlen(char *str)
+static unsigned int	ft_strlen(char *str)
 {
 	unsigned int	i;
 
@@ -24,7 +24,7 @@ unsigned int	ft_strlen(char *str)
 	return (i);
 }
 
-int				ft_get_number(char *str, char *base, int value)
+static int			ft_get_number(char *str, char *base, int value)
 {
 	int		baselen;
 	int		position;
@@ -52,7 +52,7 @@ int				ft_get_number(char *str, char *base, int value)
 	return (value);
 }
 
-int				ft_atoi_base(char *str, char *base)
+static int			ft_atoi_base(char *str, char *base)
 {
 	int		value;
 	int		sign;
@@ -74,7 +74,7 @@ int				ft_atoi_base(char *str, char *base)
 	return (value * sign);
 }
 
-int				ft_output_base(char *convert, char *base, int nbr, int i)
+static int			ft_output_base(char *convert, char *base, int nbr, int i)
 {
 	int		baselen;
 	int		sign;
@@ -96,7 +96,7 @@ int				ft_output_base(char *convert, char *base, int nbr, int i)
 	}
 }
 
-char			*ft_convert_base(char *nbr, char *base_from, char *base_to)
+char				*ft_convert_base(char *nbr, char *base_from, char *base_to)
 {
 	char	*convert;
 	int		decimal_value;

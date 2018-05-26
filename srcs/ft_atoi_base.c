@@ -6,11 +6,11 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/20 19:37:00 by alyle             #+#    #+#             */
-/*   Updated: 2018/03/21 20:42:11 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 17:26:02 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *str)
+static unsigned int	ft_strlen(char *str)
 {
 	unsigned int	i;
 
@@ -22,7 +22,7 @@ unsigned int	ft_strlen(char *str)
 	return (i);
 }
 
-int				ft_str_char(char *str, char to_find, int i)
+static int			ft_str_char(char *str, char to_find, int i)
 {
 	while (str[i] != '\0')
 	{
@@ -33,7 +33,7 @@ int				ft_str_char(char *str, char to_find, int i)
 	return (0);
 }
 
-int				ft_valid_base(char *str)
+static int			ft_valid_base(char *str)
 {
 	unsigned int	i;
 
@@ -49,7 +49,7 @@ int				ft_valid_base(char *str)
 	return (1);
 }
 
-int				ft_get_number(char *str, char *base, int value)
+static int			ft_get_number(char *str, char *base, int value)
 {
 	int		baselen;
 	int		position;
@@ -77,7 +77,7 @@ int				ft_get_number(char *str, char *base, int value)
 	return (value);
 }
 
-int				ft_atoi_base(char *str, char *base)
+int					ft_atoi_base(char *str, char *base)
 {
 	int		value;
 	int		sign;

@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 16:56:18 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/19 17:46:10 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 17:27:55 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static int		ft_count_words(char const *str, char c)
 	return (count);
 }
 
-int				ft_wl(char const *s, char c, int start)
+static int		ft_wl(char const *s, char c, int start)
 {
 	int		wordlen;
 

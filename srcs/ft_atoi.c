@@ -6,11 +6,11 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/18 21:44:59 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 16:27:22 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 17:26:15 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isspace(char c)
+static int		ft_isspace(char c)
 {
 	if (c == '\t' || c == '\n' || c == '\v')
 		return (1);
@@ -19,7 +19,7 @@ int		ft_isspace(char c)
 	return (0);
 }
 
-int		ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	int		i;
 	int		sign;
