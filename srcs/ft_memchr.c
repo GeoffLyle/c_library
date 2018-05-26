@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 15:00:28 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 16:11:28 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 21:33:03 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		while (n--)
 		{
 			if (*src == (unsigned char)c)
-				return (void *)(s);
+				return (void *)(src);
 			src++;
 		}
 	}

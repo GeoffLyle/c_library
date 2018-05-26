@@ -6,7 +6,7 @@
 #    By: alyle <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/12 12:17:16 by alyle             #+#    #+#              #
-#    Updated: 2018/05/25 17:39:15 by alyle            ###   ########.fr        #
+#    Updated: 2018/05/25 20:22:21 by alyle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,13 +40,13 @@ OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
 	  ft_putchar.o ft_putstr.o ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o \
 	  ft_putnbr_fd.o ft_putendl.o ft_putendl_fd.o ft_itoa.o ft_lstnew.o \
-	  ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.oi \
+	  ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
 	  ft_strstr.o
 
 INCLUDES = ./includes/
 
 
-all: $(LIBNAME) $(NAME)
+all: $(NAME)
 
 $(NAME):
 	@gcc $(GCCFLAGS) -c $(SRCS) -I$(INCLUDES)

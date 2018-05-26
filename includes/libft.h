@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 14:49:45 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/12 17:31:20 by alyle            ###   ########.fr       */
+/*   Updated: 2018/05/25 22:10:47 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+void		*ft_memset(void *b, int c, size_t len);
 
 #endif
