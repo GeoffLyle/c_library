@@ -6,7 +6,7 @@
 #    By: alyle <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/12 12:17:16 by alyle             #+#    #+#              #
-#    Updated: 2018/05/25 17:33:28 by alyle            ###   ########.fr        #
+#    Updated: 2018/05/25 17:39:15 by alyle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS = main.c srcs/ft_memset.c srcs/ft_bzero.c srcs/ft_memcpy.c srcs/ft_memccpy.
 	   srcs/ft_putnbr.c srcs/ft_putchar_fd.c srcs/ft_putstr_fd.c  \
 	   srcs/ft_putnbr_fd.c srcs/ft_putendl.c srcs/ft_putendl_fd.c srcs/ft_itoa.c \
 	   srcs/ft_lstnew.c srcs/ft_lstdelone.c srcs/ft_lstdel.c srcs/ft_lstadd.c \
-	   srcs/ft_lstiter.c srcs/ft_lstmap.c
+	   srcs/ft_lstiter.c srcs/ft_lstmap.c srcs/ft_strstr.c
 
 OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o \
@@ -40,7 +40,8 @@ OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o \
 	  ft_putchar.o ft_putstr.o ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o \
 	  ft_putnbr_fd.o ft_putendl.o ft_putendl_fd.o ft_itoa.o ft_lstnew.o \
-	  ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o
+	  ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.oi \
+	  ft_strstr.o
 
 INCLUDES = ./includes/
 
