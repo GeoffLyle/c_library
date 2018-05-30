@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strnew(size_t size)
 {
@@ -19,7 +18,7 @@ char	*ft_strnew(size_t size)
 	char	*fresh;
 
 	i = 0;
-	fresh = (char *)malloc(sizeof(char *) * size);
+	fresh = (char *)ft_memalloc(sizeof(char *) * size);
 	if (fresh)
 	{
 		while (i < size)

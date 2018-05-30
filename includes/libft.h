@@ -23,6 +23,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-void		*ft_memset(void *b, int c, size_t len);
+void				*ft_memset(void *b, int c, size_t len);
+void				*ft_memalloc(size_t size);
 
 #endif
