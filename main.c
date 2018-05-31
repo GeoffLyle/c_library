@@ -11,8 +11,13 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "stdio.h"
 
 int		main(void)
 {
+	char *str = ft_memalloc(5);
+	ft_memset(str, 71, 5);
+	str[4] = '\0';
+	printf("%s\n", str);
 	return (0);
 }

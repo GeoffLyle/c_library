@@ -12,13 +12,6 @@
 
 #include "libft.h"
 
-static void	ft_lstadd(t_list **alst, t_list *new)
-{
-	if (*alst)
-		new->next = *alst;
-	*alst = new;
-}
-
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*maplist;
