@@ -18,11 +18,10 @@ char	*ft_strnew(size_t size)
 	char	*fresh;
 
 	i = 0;
-	fresh = (char *)ft_memalloc(sizeof(char *) * size);
+	fresh = (char *)ft_memalloc(sizeof(char) * (size + 1));
 	if (fresh)
 	{
-		while (i < size)
-			fresh[i++] = '\0';
+		ft_memset(fresh, '\0', size + 1);
 		return (fresh);
 	}
 	return (NULL);

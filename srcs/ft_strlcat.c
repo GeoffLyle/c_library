@@ -22,8 +22,7 @@ static size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-size_t			ft_strlcat(char *restrict s1, const char *restrict s2,
-		size_t n)
+size_t			ft_strlcat(char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 	size_t	j;
