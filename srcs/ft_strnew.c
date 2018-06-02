@@ -14,11 +14,9 @@
 
 char	*ft_strnew(size_t size)
 {
-	size_t	i;
 	char	*fresh;
 
-	i = 0;
-	fresh = (char *)ft_memalloc(sizeof(char) * (size + 1));
+	fresh = (char *)malloc(sizeof(char) * (size + 1));
 	if (fresh)
 	{
 		ft_memset(fresh, '\0', size + 1);
