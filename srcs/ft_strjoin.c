@@ -10,32 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-
-static size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char			*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	s1len;
-	size_t	s2len;
 	char	*joinedstr;
+	int		i;
+	int		j;
 
-	s1len = ft_strlen(s1);
-	s2len = ft_strlen(s2);
-	joinedstr = (char *)malloc(sizeof(char *) * (s1len + s2len + 1));
-	while (*s1)
-		*joinedstr++ = *s1++;
-	while (*s2)
-		*joinedstr++ = *s2++;
-	*joinedstr = '\0';
-	return (joinedstr);
+	if (s1 && s2)
+	{
+		joinedstr = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+		if (joinedstr)
+		{
+			i = 0;
+			j = 0;
+			while (s1[i])
+				joinedstr[j++] = s1[i++];
+			i = 0;
+			while (s2[i])
+				joinedstr[j++] = s2[i++];
+			return (joinedstr);
+		}
+	}
+	return (NULL);
 }

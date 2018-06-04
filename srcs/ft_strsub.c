@@ -10,20 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*substr;
+	int		i;
 
-	substr = (char *)malloc(sizeof(char *) * (len + 1));
-	if (substr)
+	if (s)
 	{
-		while (len--)
-			*substr++ = s[start++];
-		*substr = '\0';
-		return (substr);
+		substr = ft_strnew(len);
+		if (substr)
+		{
+			i = 0;
+			while (len--)
+			{
+				substr[i] = s[start + i];
+				i++;
+			}
+			return (substr);
+		}
 	}
 	return (NULL);
 }
