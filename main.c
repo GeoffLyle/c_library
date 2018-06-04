@@ -15,9 +15,10 @@
 
 int		main(void)
 {
-	char *str = ft_memalloc(5);
-	ft_memset(str, 71, 5);
-	str[4] = '\0';
-	printf("%s\n", str);
+	int min = -2147483648;
+	int max = 2147483647;
+
+	ft_putnbr(min);
+	ft_putnbr(max);
 	return (0);
 }
