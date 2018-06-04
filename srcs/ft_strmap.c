@@ -10,25 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
-	unsigned int	strlen;
-	unsigned int	i;
-	char			*strmap;
-
-	strlen = 0;
+	char			*strmp;
+	int				i;
+	
 	i = 0;
-	while (s[strlen])
-		strlen++;
-	strmap = (char *)malloc(sizeof(char *) * (strlen + 1));
-	while (i < strlen)
+	if (s && f)
 	{
-		strmap[i] = f(s[i]);
-		i++;
+		strmp = ft_strnew(ft_strlen(s));
+		if (strmp)
+		{
+			while (s[i])
+			{
+				strmp[i] = f(s[i]);
+				i++;
+			}
+			return (strmp);
+		}
 	}
-	strmap[i] = '\0';
-	return (strmap);
+	return (NULL);
 }
