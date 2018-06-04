@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-static int		ft_copy_word(char *dest, char const *src, int j)
+static int		ft_copy_word(char *dest, char const *src, char c, int j)
 {
 	int		i;
 
 	i = 0;
-	while (src[j] != '\0' && src[j] != ' ' && src[j] != '\n' && src[j] != '\t')
+	while (src[j]  && src[j] != c)
 	{
 		dest[i] = src[j];
 		i++;
@@ -71,26 +71,29 @@ char			**ft_strsplit(char const *s, char c)
 	char	**sa;
 	int		word;
 	int		j;
-
-	sa = malloc(sizeof(char*) * (ft_count_words(s, c) + 1));
-	if (sa)
+	
+	if (s)
 	{
-		word = 0;
-		j = 0;
-		while (s[j])
+		sa = malloc(sizeof(char*) * (ft_count_words(s, c) + 1));
+		if (sa)
 		{
-			if (s[j] == c)
-				j++;
-			else
+			word = 0;
+			j = 0;
+			while (s[j])
 			{
-				sa[word] = (char*)malloc(sizeof(char*) * (ft_wl(s, c, j) + 1));
-				if (!sa[word])
-					return (NULL);
-				j = ft_copy_word(sa[word++], s, j);
+				if (s[j] == c)
+					j++;
+				else
+				{
+					sa[word] = ft_strnew(ft_wl(s, c, j));
+					if (!sa[word])
+						return (NULL);
+					j = ft_copy_word(sa[word++], s, c, j);
+				}
 			}
+			sa[word] = 0;
+			return (sa);
 		}
-		sa[word] = 0;
-		return (sa);
 	}
 	return (NULL);
 }
