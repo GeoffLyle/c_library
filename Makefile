@@ -14,7 +14,7 @@ NAME = libft.a
 
 GCCFLAGS = -Wall -Wextra -Werror
 
-SRCS = main.c srcs/ft_memset.c srcs/ft_bzero.c srcs/ft_memcpy.c srcs/ft_memccpy.c \
+SRCS = srcs/ft_memset.c srcs/ft_bzero.c srcs/ft_memcpy.c srcs/ft_memccpy.c \
 	   srcs/ft_memmove.c srcs/ft_memchr.c srcs/ft_memcmp.c srcs/ft_strlen.c \
 	   srcs/ft_strdup.c srcs/ft_strcpy.c srcs/ft_strncpy.c srcs/ft_strcat.c \
 	   srcs/ft_strlcat.c srcs/ft_strcmp.c srcs/ft_strncmp.c srcs/ft_atoi.c \
@@ -30,7 +30,7 @@ SRCS = main.c srcs/ft_memset.c srcs/ft_bzero.c srcs/ft_memcpy.c srcs/ft_memccpy.
 	   srcs/ft_lstnew.c srcs/ft_lstdelone.c srcs/ft_lstdel.c srcs/ft_lstadd.c \
 	   srcs/ft_lstiter.c srcs/ft_lstmap.c srcs/ft_strstr.c
 
-OBJ = main.o ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
+OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o \
 	  ft_strcat.o ft_strlcat.o ft_strcmp.o ft_strncmp.o ft_atoi.o ft_isalpha.o \
 	  ft_isdigit.o ft_strncat.o ft_strchr.o ft_strrchr.o ft_strnstr.o \

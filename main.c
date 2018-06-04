@@ -18,7 +18,7 @@ int		main(void)
 	int min = -2147483648;
 	int max = 2147483647;
 
-	ft_putnbr(min);
-	ft_putnbr(max);
+	printf("%s\n", ft_itoa(min));
+	printf("%s\n", ft_itoa(max));
 	return (0);
 }

@@ -10,20 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	ft_num_digits(int n)
 {
 	int		digits;
 
-	digits = 1;
-	while (n > 10)
+	digits = 0;
+	if (n < 0)
+	{
+		if (n > -10)
+			return (1);
+		n /= -10;
+		digits++;
+	}
+	while (n >= 10)
 	{
 		n /= 10;
 		digits++;
 	}
-	return (digits);
+	return (digits + 1);
 }
 
 char		*ft_itoa(int n)
@@ -36,13 +42,12 @@ char		*ft_itoa(int n)
 	digits = ft_num_digits(n);
 	if (n < 0)
 		is_negative = 1;
-	numstr = (char*)malloc(sizeof(char*) * (digits + is_negative + 1));
+	numstr = ft_strnew(digits + is_negative);
 	if (numstr)
 	{
-		numstr[digits + is_negative + 1] = '\0';
 		while (n)
 		{
-			numstr[digits + is_negative] = n % 10;
+			numstr[digits + is_negative - 1] = n % 10;
 			n /= 10;
 			digits--;
 		}
