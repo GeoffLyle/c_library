@@ -12,46 +12,36 @@
 
 #include "libft.h"
 
-static int	ft_num_digits(int n)
+static size_t	ft_num_digits(int n)
 {
-	int		digits;
+	size_t	digits;
 
-	digits = 0;
-	if (n < 0)
-	{
-		if (n > -10)
-			return (1);
-		n /= -10;
+	digits = 1;
+	while (n /= 10)
 		digits++;
-	}
-	while (n >= 10)
-	{
-		n /= 10;
-		digits++;
-	}
-	return (digits + 1);
+	return (digits);
 }
 
-char		*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-	int		is_negative;
-	char	*numstr;
-	int		digits;
+	char		*numstr;
+	size_t		digits;
+	int			is_negative;
 
-	is_negative = 0;
 	digits = ft_num_digits(n);
+	is_negative = 1;
 	if (n < 0)
-		is_negative = 1;
-	numstr = ft_strnew(digits + is_negative);
+	{
+		digits++;
+		is_negative = -1;
+	}
+	numstr = ft_strnew(digits);
 	if (numstr)
 	{
-		while (n)
-		{
-			numstr[digits + is_negative - 1] = n % 10;
-			n /= 10;
-			digits--;
-		}
-		if (is_negative)
+		numstr[--digits] = (n % 10) * is_negative + '0';
+		while (n /= 10)
+			numstr[--digits] = (n % 10) * is_negative + '0';
+		if (is_negative < 0)
 			numstr[0] = '-';
 		return (numstr);
 	}
