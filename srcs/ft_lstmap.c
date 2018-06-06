@@ -15,10 +15,20 @@
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list	*maplist;
+	t_list	*new;
+	t_list	*tmp;
 
+	tmp = f(lst);
+	if (!(new = ft_lstnew(tmp->content, tmp->content_size)))
+		return (NULL);
+	maplist = new;
+	lst = lst->next;
 	while (lst)
 	{
-		ft_lstadd(&maplist, f(lst));
+		tmp = f(lst);
+		if (!(new->next = ft_lstnew(tmp->content, tmp->content_size)))
+			return (NULL);
+		new = new->next;
 		lst = lst->next;
 	}
 	return (maplist);
