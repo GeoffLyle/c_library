@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/15 11:28:20 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/25 16:17:31 by alyle            ###   ########.fr       */
+/*   Updated: 2018/06/09 15:41:54 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,14 @@ void			ft_putnbr(int n)
 			ft_putnbr(n / -10);
 		ft_putchar(-(n % 10) + '0');
 	}
-	if (n / 10 == 0)
-		ft_putchar(n + '0');
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putchar((n % 10) + '0');
+		if (n / 10 == 0)
+			ft_putchar(n + '0');
+		else
+		{
+			ft_putnbr(n / 10);
+			ft_putchar((n % 10) + '0');
+		}
 	}
 }
