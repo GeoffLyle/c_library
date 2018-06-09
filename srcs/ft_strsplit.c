@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 16:56:18 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/25 17:27:55 by alyle            ###   ########.fr       */
+/*   Updated: 2018/06/09 15:21:25 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int		ft_copy_word(char *dest, char const *src, char c, int j)
 	int		i;
 
 	i = 0;
-	while (src[j]  && src[j] != c)
+	while (src[j] && src[j] != c)
 	{
 		dest[i] = src[j];
 		i++;
@@ -66,33 +66,40 @@ static int		ft_wl(char const *s, char c, int start)
 	return (wordlen);
 }
 
+static char		**ft_copywords(char const *s, char c, char **sa)
+{
+	int		j;
+	int		word;
+
+	word = 0;
+	j = 0;
+	while (s[j])
+	{
+		if (s[j] == c)
+			j++;
+		else
+		{
+			sa[word] = ft_strnew(ft_wl(s, c, j));
+			if (!sa[word])
+				return (NULL);
+			j = ft_copy_word(sa[word++], s, c, j);
+		}
+	}
+	sa[word] = 0;
+	return (sa);
+}
+
 char			**ft_strsplit(char const *s, char c)
 {
 	char	**sa;
-	int		word;
-	int		j;
-	
+
 	if (s)
 	{
 		sa = malloc(sizeof(char*) * (ft_count_words(s, c) + 1));
 		if (sa)
 		{
-			word = 0;
-			j = 0;
-			while (s[j])
-			{
-				if (s[j] == c)
-					j++;
-				else
-				{
-					sa[word] = ft_strnew(ft_wl(s, c, j));
-					if (!sa[word])
-						return (NULL);
-					j = ft_copy_word(sa[word++], s, c, j);
-				}
-			}
-			sa[word] = 0;
-			return (sa);
+			if (ft_copywords(s, c, sa))
+				return (sa);
 		}
 	}
 	return (NULL);
