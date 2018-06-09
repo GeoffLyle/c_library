@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_numdigits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/12 14:48:29 by alyle             #+#    #+#             */
-/*   Updated: 2018/06/09 15:09:47 by alyle            ###   ########.fr       */
+/*   Created: 2018/06/09 15:56:03 by alyle             #+#    #+#             */
+/*   Updated: 2018/06/09 16:21:45 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
-int		main(void)
+size_t	ft_numdigits(int n)
 {
-	int min;
-	int max;
+	size_t	digits;
 
-	min = -214783648;
-	max = 2147483647;
-	printf("%s\n", ft_itoa(min));
-	printf("%s\n", ft_itoa(max));
-	return (0);
+	digits = 1;
+	while (n /= 10)
+		digits++;
+	return (digits);
 }

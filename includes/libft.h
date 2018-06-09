@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/12 14:49:45 by alyle             #+#    #+#             */
-/*   Updated: 2018/06/09 15:12:29 by alyle            ###   ########.fr       */
+/*   Updated: 2018/06/09 16:23:57 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,6 @@ char				*ft_strlowcase(char *str);
 char				*ft_strcapitalize(char *str);
 char				*ft_strrev(char *str);
 int					ft_str_is_alpha(char *str);
+size_t				ft_numdigits(int n);
 
 #endif

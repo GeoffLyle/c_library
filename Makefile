@@ -6,7 +6,7 @@
 #    By: alyle <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/12 12:17:16 by alyle             #+#    #+#              #
-#    Updated: 2018/05/25 20:22:21 by alyle            ###   ########.fr        #
+#    Updated: 2018/06/09 16:13:54 by alyle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRCS = srcs/ft_memset.c srcs/ft_bzero.c srcs/ft_memcpy.c srcs/ft_memccpy.c \
 	   srcs/ft_lstnew.c srcs/ft_lstdelone.c srcs/ft_lstdel.c srcs/ft_lstadd.c \
 	   srcs/ft_lstiter.c srcs/ft_lstmap.c srcs/ft_strstr.c srcs/ft_strlowcase.c \
 	   srcs/ft_strupcase.c srcs/ft_strcapitalize.c srcs/ft_strrev.c \
-	   srcs/ft_str_is_alpha.c
+	   srcs/ft_str_is_alpha.c srcs/ft_numdigits.c
 
 OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_memchr.o ft_memcmp.o ft_strlen.o ft_strdup.o ft_strcpy.o ft_strncpy.o \
@@ -44,10 +44,9 @@ OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_putnbr_fd.o ft_putendl.o ft_putendl_fd.o ft_itoa.o ft_lstnew.o \
 	  ft_lstdelone.o ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o \
 	  ft_strstr.o ft_strlowcase.o ft_strupcase.o ft_strcapitalize.o \
-	  ft_strrev.o ft_str_is_alpha.o
+	  ft_strrev.o ft_str_is_alpha.o ft_numdigits.o
 
 INCLUDES = ./includes/
-
 
 all: $(NAME)
 

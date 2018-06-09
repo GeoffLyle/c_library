@@ -6,21 +6,11 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/25 16:19:38 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/25 16:19:39 by alyle            ###   ########.fr       */
+/*   Updated: 2018/06/09 16:23:42 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_num_digits(int n)
-{
-	size_t	digits;
-
-	digits = 1;
-	while (n /= 10)
-		digits++;
-	return (digits);
-}
 
 char			*ft_itoa(int n)
 {
@@ -28,7 +18,7 @@ char			*ft_itoa(int n)
 	size_t		digits;
 	int			is_negative;
 
-	digits = ft_num_digits(n);
+	digits = ft_numdigits(n);
 	is_negative = 1;
 	if (n < 0)
 	{
