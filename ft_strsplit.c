@@ -6,7 +6,7 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 16:56:18 by alyle             #+#    #+#             */
-/*   Updated: 2018/06/09 15:26:42 by alyle            ###   ########.fr       */
+/*   Updated: 2018/06/09 18:54:48 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ char			**ft_strsplit(char const *s, char c)
 
 	if (s)
 	{
-		sa = malloc(sizeof(char*) * (ft_count_words(s, c) + 1));
+		sa = (char **)malloc(sizeof(char*) * (ft_count_words(s, c) + 1));
 		if (sa)
 		{
 			if (ft_copywords(s, c, sa))
