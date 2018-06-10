@@ -6,7 +6,7 @@
 #    By: alyle <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/12 12:17:16 by alyle             #+#    #+#              #
-#    Updated: 2018/06/09 22:57:45 by alyle            ###   ########.fr        #
+#    Updated: 2018/06/10 15:13:59 by alyle            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,12 +46,10 @@ OBJ = ft_memset.o ft_bzero.o ft_memcpy.o ft_memccpy.o ft_memmove.o \
 	  ft_strstr.o ft_strlowcase.o ft_strupcase.o ft_strcapitalize.o \
 	  ft_strrev.o ft_str_is_alpha.o ft_numdigits.o
 
-INCLUDES = ./includes/
-
 all: $(NAME)
 
 $(NAME):
-	@gcc $(GCCFLAGS) -c $(SRCS) -I$(INCLUDES)
+	@gcc $(GCCFLAGS) -c $(SRCS) -I libft.h
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
