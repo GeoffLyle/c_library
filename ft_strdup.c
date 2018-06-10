@@ -6,26 +6,11 @@
 /*   By: alyle <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/21 11:58:46 by alyle             #+#    #+#             */
-/*   Updated: 2018/05/25 17:38:12 by alyle            ###   ########.fr       */
+/*   Updated: 2018/06/10 15:17:41 by alyle            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdlib.h>
-
-static char	*ft_strcpy(char *dst, const char *src)
-{
-	int		i;
-
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
-}
+#include "libft.h"
 
 char		*ft_strdup(const char *src)
 {
